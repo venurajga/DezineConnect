@@ -413,7 +413,7 @@
                 });
               </script>
             </div>
-          <% elsif @blog.name== "Rajesh Dahiya" then %>
+            <% elsif @blog.name== "Rajesh Dahiya" then %>
             <div id="portfolio_works"><!-- portfolio_works div -->
               <div id="triggers">
                 <div id="interview_video_works">
@@ -456,6 +456,80 @@
                   </a>
                   <a class="interview_video_works_space" alt="" href="../../images/Rajesh_Dhaiya/14_1.jpg">
                     <img src="../../images/Rajesh_Dhaiya/14.jpg"/>
+                  </a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <!-- overlay element -->
+              <div id="gallery" class="simple_overlay"><div class="close"></div>
+                <!-- "previous image" action -->
+                <a class="prev" style="opacity: 0.8;">prev</a>
+                <!-- "next image" action -->
+                <a class="next" style="opacity: 0.8;">next</a>
+                <!-- image information -->
+                <div class="info" style="opacity: 0.8;"></div>
+                <!-- load indicator (animated gif) -->
+                <img src="../../images/loading.gif" class="progress"/>
+              </div>
+
+              <script>
+                $(function() {
+                  // select the thumbnails and make them trigger our overlay
+                  $("#triggers a").overlay({
+                    // each trigger uses the same overlay with the id "gallery"
+                    target: '#gallery',
+                    // optional exposing effect
+                    expose: '#666'
+                    // let the gallery plugin do its magic!
+                  }).gallery({
+                    // the plugin accepts its own set of configuration options
+                    speed: 800
+                  });
+                });
+              </script>
+            </div>
+          <% elsif @blog.name== "Abhisek Sarda" then %>
+            <div id="portfolio_works"><!-- portfolio_works div -->
+              <div id="triggers">
+                <div id="interview_video_works">
+
+                  <a alt="PPT Salon creates beautiful and extremely effective presentations with the use of appropriate anecdotes, striking imagery and incisive captions." href="../../abhisek_sarda/12_design_in_business.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/12_design_in_business_thumb.jpg"/>
+                  </a>
+                  <a alt="PPT Salon works with a wide range of clients – from large and small companies to even filmmakers. Seen here is a slide from a presentation done for Sydney Theatre School." href="../../abhisek_sarda/9_sydney_theatre_school_b.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/9_sydney_theatre_school_b_thumb.jpg"/>
+                  </a>
+                  <a alt="A slide from a presentation done for Feelgoodz, a footwear company." href="../../abhisek_sarda/1_feelgoodz.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/1_feelgoodz_thumb.jpg"/>
+                  </a>
+                  <a class="interview_video_works_space" alt="Work done for PlanetGoa, a fortnightly magazine on Goa." href="../../abhisek_sarda/3_planetgoa.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/3_planetgoa_thumb.jpg"/>
+                  </a>
+
+                  <a alt="A slide from a presentation done for Sydney Theatre School, Australia." href="../../abhisek_sarda/2_sydney_theatre_school.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/2_sydney_theatre_school_thumb.jpg"/>
+                  </a>
+                  <a alt="A slide from a presentation done by PPT Salon for Deloitte." href="../../abhisek_sarda/4_deloitte.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/4_deloitte_thumb.jpg"/>
+                  </a>
+                  <a alt="A novel wedding invite created by PPT Salon." href="../../abhisek_sarda/5_wedding_invite.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/5_wedding_invite_thumb.jpg"/>
+                  </a>
+                  <a class="interview_video_works_space" alt="Website done for the PGPSM programme at National Institute of Securities Markets (NISM)." href="../../abhisek_sarda/6_pgpsm_website.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/6_pgpsm_website_thumb.jpg"/>
+                  </a>
+
+                  <a alt="Project done for the CSMP programme at National Institute of Securities Markets (NISM)." href="../../abhisek_sarda/7_csmp_placements.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/7_csmp_placements_thumb.jpg"/>
+                  </a>
+                  <a alt="A slide from a presentation created by PPT Salon on ‘Design in Business’." href="../../abhisek_sarda/8_pseudo_mba.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/8_pseudo_mba_thumb.jpg"/>
+                  </a>
+                  <a alt="A CD mock designed as a part of a project for the Taj Hotels, Resorts and Palaces." href="../../abhisek_sarda/10_taj_cd_mock.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/10_taj_cd_mock_thumb.jpg"/>
+                  </a>
+                  <a class="interview_video_works_space" alt="An infographic indicating the student demographics, created as a part of a project done for NISM." href="../../abhisek_sarda/11_student_demographics.jpg">
+                    <img src="../../abhisek_sarda/thumbnails/11_student_demographics_thumb.jpg"/>
                   </a>
                   <div class="clear"></div>
                 </div>
@@ -1307,7 +1381,7 @@
     <%= render :partial => "featured_interviews" %>
 
     <div class="sidebar_chunk">
-      <%= render :partial => "facebook_fans" %>
+      <%#= render :partial => "facebook_fans" %>
     </div>
   </div><!-- sidebar ends -->
 </div>
